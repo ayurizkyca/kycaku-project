@@ -1,0 +1,13 @@
+.button {
+  border-radius: 10px;
+  padding: 8px 40px;
+  border: none;
+}
+
+.primary {
+  background-color: #FB437A;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 2px 10px #FB437A;
+}

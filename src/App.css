@@ -1,0 +1,54 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  padding: 0;
+  /* text-align: center; */
+  width: 100vw;
+  background-color: #FFFFFF;
+}
+
+.hero{
+  background-image: url('/src/assets/hero.png');
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 55px;
+}
+
+.hero h2{
+  font-size: 46px;
+  font-weight: bold;
+  color: #FB437A;
+}
+
+.bestProduct{
+  background-color: rgba(228, 39, 96, 0.15);
+  padding: 130px;
+  margin: 0px;
+}
+
+.bestProduct h3{
+  color: #FB437A;
+}
+
+.listCard{
+  display: flex;
+  gap: 20px;
+}
+
+.benefit{
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  align-items: center;
+}
+
+.benefitList{
+  margin-bottom: 50px;
+}
+
+.benefit img{
+  height: 550px;
+}

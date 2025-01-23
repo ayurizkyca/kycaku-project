@@ -1,0 +1,32 @@
+.cardProduct{
+    width: 280px;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0px 2px 10px #4F4F4F;
+}
+
+.cardDesc{
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4F4F4F;
+}
+
+.cardPrice{
+    color: #FB437A;
+}   
+
+/* card benefit */
+
+.cardBenefit{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.cardBenefit img{
+    height: 70px;
+    width: 70px;
+}
