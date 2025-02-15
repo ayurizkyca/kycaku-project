@@ -6,6 +6,8 @@ import { dataBenefit } from '../data/dummyData'
 import LayoutUser from './layout/LayoutUser'
 
 function LandingPage() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <LayoutUser>
       <section
@@ -52,7 +54,7 @@ function LandingPage() {
           <p className='text-[#9D9DBC]'>Discover more about our flower shop for helpful insights</p>
         </div>
         <div className='w-full'>
-          <Accordion type="single" collapsible className="flex w-full items-center justify-around">
+          <Accordion type="single" collapsible className="flex w-full items-center justify-around gap-4">
             <div className='flex flex-col gap-3 w-[600px]'>
               <AccordionItem value="item-1" className='border-2 px-4 rounded-4xl'>
                 <AccordionTrigger className='font-semibold text-[#0D0C41]'>Is it accessible?</AccordionTrigger>
@@ -108,7 +110,7 @@ function LandingPage() {
           <img className='absolute right-20 top-620 transition-transform duration-300 hover:-translate-y-6' src="src/assets/footer-img.png" alt="footer-img" />
         </section>
         <section className='text-center p-2'>
-          <p className='text-[#9D9DBC]'>kycaku.project@2023</p>
+          <p className='text-[#9D9DBC]'>kycaku.project@{currentYear}</p>
         </section>
       </footer>
     </LayoutUser>
