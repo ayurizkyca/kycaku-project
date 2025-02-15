@@ -16,17 +16,3 @@
 .cardPrice{
     color: #FB437A;
 }   
-
-/* card benefit */
-
-.cardBenefit{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 16px;
-}
-
-.cardBenefit img{
-    height: 70px;
-    width: 70px;
-}

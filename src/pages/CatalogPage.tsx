@@ -1,5 +1,5 @@
 import React from 'react'
-import LayoutUser from './layout/layoutUser'
+import LayoutUser from './layout/LayoutUser'
 import CardProduct from '../component/CardProduct'
 import Button from '../component/Button'
 
@@ -34,7 +34,7 @@ const CatalogPage: React.FC = () => {
               <p>
               "🎉 Welcome to our store! Enjoy a special 10% discount on your first purchase. <br />Use code WELCOME10 at checkout and make your moment extra special! 🌸"
               </p>
-              <Button title='Use Code' variant=''/>
+              <Button title='Use Code' variant='secondary'/>
             </div>
           </div>
         </section>

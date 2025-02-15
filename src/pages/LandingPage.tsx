@@ -8,27 +8,27 @@ function LandingPage() {
   return (
     <LayoutUser>
         <section className='hero'>
-        <h2>"Blossom into moments of pure <br /> delight with our exquisite floral <br /> arrangements."</h2>
+        <h2 className='font-bold text-[#FB437A] text-[46px] pb-4'>"Blossom into moments of pure <br /> delight with our exquisite floral <br /> arrangements."</h2>
         <Button title='Chat with Admin' variant='primary' />
       </section>
-      <section className='bestProduct'>
-        <h3>Best Seller Bouquets</h3>
-        <p>Choose for your special day</p>
-        <div className='listCard'>
+      <section className="p-[130px] bg-[rgba(251,67,122,0.15)]">
+        <h3 className='text-3xl font-bold text-[#FB437A]'>Best Seller Bouquets</h3>
+        <p className='text-[#4F4F4F] text-xl'>Choose for your special day</p>
+        <div className='flex gap-4 py-4'>
           <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
           <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
           <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
           <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
         </div>
       </section>
-      <section className='benefit'>
+      <section className='flex items-center justify-between p-[80px]'>
         <div>
           <img src="src/assets/hero-benefit.png" alt="img-hero benefit" />
         </div>
-        <div className='benefitDesc'>
-          <h1>Extra Benefits</h1>
-          <p>You drive safety and famous</p>
-          <div className='benefitList'>
+        <div>
+          <h1 className='text-2xl text-[#5C5461] font-bold'>Extra Benefits</h1>
+          <p className='text-[#4F4F4F]  text-xl font-light'>You drive safety and famous</p>
+          <div className='mb-[50px] mt-4'>
             {dataBenefit.map((benefit) => (
               <CardBenefit
                 description={benefit.description}
@@ -42,8 +42,8 @@ function LandingPage() {
         </div>
       </section>
       <section>
-        <h1>Frequently Asked Questions</h1>
-        <p>Discover more about our flower shop for helpful insights</p>
+        <h1 className='text-[#5C5461] text-3xl font-bold'>Frequently Asked Questions</h1>
+        <p className='text-[#9D9DBC]'>Discover more about our flower shop for helpful insights</p>
       </section>
     </LayoutUser>
   )

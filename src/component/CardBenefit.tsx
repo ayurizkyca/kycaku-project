@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './CardProduct.module.css'
 
 interface Props {
   image: string,
@@ -9,11 +8,11 @@ interface Props {
 
 const CardBenefit: React.FC<Props> = ({image, description, title}) => {
   return (
-    <div className={styles.cardBenefit}>
+    <div className='flex items-center gap-2 py-1'>
       <img src={image} alt="img-card" />
       <div>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2 className='font-bold text-[#5C5461]'>{title}</h2>
+        <p className='text-[#9D9DBC]'>{description}</p>
       </div>
     </div>
   )
