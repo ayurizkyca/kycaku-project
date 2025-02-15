@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="sticky top-0 flex items-center h-[20px] bg-[#FFFEFE] p-[55px] py-[30px] justify-around">
+      <div className="sticky top-0 flex items-center h-[20px] bg-[#FFFEFE] py-[30px] justify-around">
         <Link to={ROUTES.ROOT}>
           <img src={kycakuLogo} alt="logo kycaku" />
         </Link>

@@ -13,7 +13,7 @@
   background-color: #FFFFFF;
 }
 
-.hero{
+/* .hero{
   background-image: url('/src/assets/hero.png');
   background-size: cover;
   height: 700px;
@@ -21,7 +21,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 0px 55px;
-}
+} */
 
 :root {
   --background: hsl(0 0% 100%);
@@ -107,6 +107,26 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 @layer base {
