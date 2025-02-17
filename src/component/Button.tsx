@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 
 interface Props {
   title: string;
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'tertiary';
 }
 
 const Button: React.FC<Props> = ({ title, variant }) => {

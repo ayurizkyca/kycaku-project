@@ -31,8 +31,16 @@ const Navbar: React.FC = () => {
               Benefits
             </Link>
           </li>
-          <li className="hover:text-[#FB437A]">Stories</li>
-          <li className="hover:text-[#FB437A]">Maps</li>
+          <li className={isActive(ROUTES.STORIES)}>
+            <Link to={ROUTES.STORIES}>
+              Stories
+            </Link>
+          </li>
+          <li className={isActive(ROUTES.MAPS)}>
+            <Link to={ROUTES.MAPS}>
+              Maps
+            </Link>
+          </li>
         </ul>
         <Button title='Log In' variant='primary' />
       </div>

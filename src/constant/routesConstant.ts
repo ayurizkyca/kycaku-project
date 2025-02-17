@@ -1,5 +1,7 @@
 export const ROUTES = {
     ROOT : '/',
     CATALOG : '/catalog',
-    BENEFIT : '/benefit'
+    BENEFIT : '/benefit',
+    STORIES : '/stories',
+    MAPS : '/maps'
 }

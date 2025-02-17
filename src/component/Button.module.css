@@ -12,9 +12,13 @@
   box-shadow: 0px 2px 10px #FB437A;
 }
 
-.secondary {
+.secondary, .tertiary {
   background-color: #FFFFFF;
   color: #FB437A;
   font-size: 16px;
   font-weight: 600;
+}
+
+.tertiary {
+  border: 1px solid #FB437A;
 }
