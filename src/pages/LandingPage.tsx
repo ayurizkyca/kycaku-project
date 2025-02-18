@@ -4,9 +4,12 @@ import CardProduct from '../component/CardProduct'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion'
 import { dataBenefit } from '../data/dummyData'
 import LayoutUser from './layout/LayoutUser'
+import { ROUTES } from '../constant/routesConstant'
+import { useNavigate } from 'react-router'
 
 function LandingPage() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   return (
     <LayoutUser>
@@ -15,7 +18,11 @@ function LandingPage() {
         style={{ backgroundImage: "url('/src/assets/hero.png')" }}
       >
         <h2 className='font-bold text-[#FB437A] text-[46px] pb-4'>"Blossom into moments of pure <br /> delight with our exquisite floral <br /> arrangements."</h2>
-        <Button title='Chat with Admin' variant='primary' />
+        <Button 
+          title='Chat with Admin' 
+          variant='primary' 
+          onClick={() => window.location.href = "https://wa.me/6285175124992"}
+        />
       </section>
       <section className="py-[130px] px-[95px] bg-[rgba(251,67,122,0.15)]">
         <h3 className='text-3xl font-bold text-[#FB437A]'>Best Seller Bouquets</h3>
@@ -45,7 +52,11 @@ function LandingPage() {
               />
             ))}
           </div>
-          <Button title='See Our Catalog' variant='primary' />
+          <Button 
+            title='See Our Catalog' 
+            variant='primary' 
+            onClick={() => navigate(ROUTES.CATALOG)}
+          />
         </div>
       </section>
       <section className='w-full flex flex-col items-center px-[95px] pb-[200px]'>
@@ -105,7 +116,7 @@ function LandingPage() {
           <div className='flex flex-col gap-2'>
             <h1 className='text-[#FB437A] text-4xl font-bold'>Let your moments bloom with our <br /> vibrant bouquets.</h1>
             <p>Secure your floral delight instantly and blossom your day <br /> with exactly what you desire.</p>
-            <Button title='Buy Now' variant='primary' />
+            <Button title='Buy Now' variant='primary' onClick={() => navigate(ROUTES.CATALOG)} />
           </div>
           <img className='absolute right-20 top-620 transition-transform duration-300 hover:-translate-y-6' src="src/assets/footer-img.png" alt="footer-img" />
         </section>

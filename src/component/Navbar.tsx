@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <Button title='Log In' variant='primary' />
+        <Button title='Log In' variant='primary' onClick={()=> {}}/>
       </div>
     </>
   )

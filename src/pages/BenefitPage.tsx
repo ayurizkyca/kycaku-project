@@ -1,8 +1,11 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
 import Button from '../component/Button'
+import { useNavigate } from 'react-router'
+import { ROUTES } from '../constant/routesConstant'
 
 const BenefitPage: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -101,8 +104,8 @@ const BenefitPage: React.FC = () => {
           <div className='flex flex-col gap-4'>
             <h1 className='text-4xl text-[#FB437A] font-bold'>Order Now & Make Every Moment <br /> Bloom with Beauty! 🌷</h1>
             <div className='flex gap-4'>
-              <Button title='Customize Your Bouquet' variant='primary' />
-              <Button title='Explore Our Collection' variant='secondary' />
+              <Button title='Customize Your Bouquet' variant='primary' onClick={() => window.location.href = "https://wa.me/6285175124992"} />
+              <Button title='Explore Our Collection' variant='secondary' onClick={() => navigate(ROUTES.CATALOG) } />
             </div>
           </div>
           <img src="src/assets/footer-img.png" alt="image-benefit" className='transition-transform duration-300 hover:-translate-y-3'/>

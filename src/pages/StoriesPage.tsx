@@ -1,11 +1,13 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
 import Button from '../component/Button'
-import { Star } from 'lucide-react'
 import CardReview from '../component/CardReview'
 import { dataReviews } from '../data/dummyData'
+import { useNavigate } from 'react-router'
+import { ROUTES } from '../constant/routesConstant'
 
 const StoriesPage: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <Navbar />
@@ -40,8 +42,8 @@ const StoriesPage: React.FC = () => {
         <div>
           <p className='text-[#FB437A] text-xl text-center'>We love seeing our flowers in your special moments! <br /> Tag us on Instagram <b>@kycaku.project</b> or use <b>#kycakuproject</b> to get featured on our page!</p>
           <div className='flex justify-center gap-4 pt-[30px]'>
-            <Button title='Order Now' variant='primary' />
-            <Button title='Write a Review' variant='tertiary' />
+            <Button title='Order Now' variant='primary' onClick={() => navigate(ROUTES.CATALOG)}/>
+            <Button title='Write a Review' variant='tertiary' onClick={() => {}} />
           </div>
         </div>
       </section>
