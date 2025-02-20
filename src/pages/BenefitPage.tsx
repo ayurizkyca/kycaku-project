@@ -18,10 +18,10 @@ const BenefitPage: React.FC = () => {
       </section>
       <section className='flex px-[95px] py-[20px] gap-[20px] border-y-2 border-[rgba(251,67,122,0.15)]'>
         <img src="src/assets/benefit-1.png" alt="img-benefit"/>
-        <div className='flex flex-col gap-[20px] justify-center'>
-          <h1 className='text-[#FB437A] text-2xl font-bold'>💐 Boundless Floral Creativity</h1>
-          <p className='text-[#FB437A]'>We bring you custom-designed bouquets tailored to your preferences, whether you desire a romantic, elegant, or whimsical floral touch. Our florists craft each bouquet with precision and passion, ensuring that every arrangement is a masterpiece.</p>
-          <p className='text-[#FB437A]'>
+        <div className='flex flex-col gap-[20px] justify-center text-[#9D9DBC]'>
+          <h1 className='text-[#5C5461] text-2xl font-bold'>💐 Boundless Floral Creativity</h1>
+          <p>We bring you custom-designed bouquets tailored to your preferences, whether you desire a romantic, elegant, or whimsical floral touch. Our florists craft each bouquet with precision and passion, ensuring that every arrangement is a masterpiece.</p>
+          <p>
             Why Choose This?
             <ul>
               <li>Custom floral designs for every occasion</li>
@@ -32,10 +32,10 @@ const BenefitPage: React.FC = () => {
         </div>
       </section>
       <section className='flex px-[95px] py-[20px] justify-center gap-[20px] items-center border-y-2 border-t-0 border-[rgba(251,67,122,0.15)]'>
-        <div className='flex flex-col gap-[20px]'>
-          <h1 className='text-2xl text-[#FB437A] font-bold'>🌸 Premium Blossoms, Lasting Beauty</h1>
-          <p className='text-[#FB437A]'>Timeless flowers that make a lasting impression. We select only the finest blooms to ensure your floral arrangements remain fresh and vibrant for longer. Whether for weddings, anniversaries, or heartfelt surprises, our flowers are designed to retain their beauty and elegance.</p>
-          <p className='text-[#FB437A]'>
+        <div className='flex flex-col gap-[20px] text-[#9D9DBC]'>
+          <h1 className='text-2xl text-[#5C5461] font-bold'>🌸 Premium Blossoms, Lasting Beauty</h1>
+          <p>Timeless flowers that make a lasting impression. We select only the finest blooms to ensure your floral arrangements remain fresh and vibrant for longer. Whether for weddings, anniversaries, or heartfelt surprises, our flowers are designed to retain their beauty and elegance.</p>
+          <p>
             What You Get:
             <ul>
               <li>Carefully selected premium flowers</li>
@@ -48,10 +48,10 @@ const BenefitPage: React.FC = () => {
       </section>
       <section className='flex px-[95px] py-[20px] gap-[20px] border-y-2 border-t-0 border-[rgba(251,67,122,0.15)]'>
         <img src="src/assets/benefit-3.png" alt="img-benefit" />
-        <div className='flex flex-col gap-[20px] justify-center'>
-          <h1 className='text-[#FB437A] text-2xl font-bold'>💌 Personalized Floral Expressions</h1>
-          <p className='text-[#FB437A]'>Express emotions with uniquely crafted floral messages.Flowers speak the language of the heart, and we make it extra special by allowing you to add personalized messages and designs. Customize your bouquet with a heartfelt note, a signature wrapping style, or a unique floral arrangement that matches the recipient s personality.</p>
-          <p className='text-[#FB437A]'>
+        <div className='flex flex-col gap-[20px] justify-center text-[#9D9DBC]'>
+          <h1 className='text-[#5C5461] text-2xl font-bold'>💌 Personalized Floral Expressions</h1>
+          <p>Express emotions with uniquely crafted floral messages.Flowers speak the language of the heart, and we make it extra special by allowing you to add personalized messages and designs. Customize your bouquet with a heartfelt note, a signature wrapping style, or a unique floral arrangement that matches the recipient s personality.</p>
+          <p>
             Personalization Options:
             <ul>
               <li>Handwritten notes with your bouquet</li>
@@ -62,10 +62,10 @@ const BenefitPage: React.FC = () => {
         </div>
       </section>
       <section className='flex px-[95px] py-[20px] justify-center gap-[20px] items-center border-y-2 border-t-0 border-[rgba(251,67,122,0.15)]'>
-        <div className='flex flex-col gap-[20px]'>
-          <h1 className='text-2xl text-[#FB437A] font-bold'>🚛 Effortless Elegance, Seamless Service</h1>
-          <p className='text-[#FB437A]'>Hassle-free ordering with fast and reliable delivery.With our user-friendly online platform, ordering flowers has never been easier. Whether you're planning ahead or need a last-minute surprise gift, we ensure a smooth and timely delivery experience, bringing your heartfelt gestures to life.</p>
-          <p className='text-[#FB437A]'>
+        <div className='flex flex-col gap-[20px] text-[#9D9DBC]'>
+          <h1 className='text-2xl text-[#5C5461] font-bold'>🚛 Effortless Elegance, Seamless Service</h1>
+          <p>Hassle-free ordering with fast and reliable delivery.With our user-friendly online platform, ordering flowers has never been easier. Whether you're planning ahead or need a last-minute surprise gift, we ensure a smooth and timely delivery experience, bringing your heartfelt gestures to life.</p>
+          <p>
             What We Offer:
             <ul>
               <li>Carefully selected premium flowers</li>
