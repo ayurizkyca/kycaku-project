@@ -16,3 +16,10 @@
 .cardPrice{
     color: #FB437A;
 }   
+
+.cardProduct img{
+    width: 280px;
+    border-radius: 10px 10px 0px 0px;
+    height: 280px;
+    object-fit: cover;
+}

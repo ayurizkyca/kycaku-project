@@ -6,10 +6,13 @@ import { dataBenefit } from '../data/dummyData'
 import LayoutUser from './layout/LayoutUser'
 import { ROUTES } from '../constant/routesConstant'
 import { useNavigate } from 'react-router'
+import useProduct from '../hooks/useProduct'
+import { capitalizeEachWord } from '../utils/textUtils'
 
 function LandingPage() {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
+  const { products, loading, error } = useProduct();
 
   return (
     <LayoutUser>
@@ -18,21 +21,30 @@ function LandingPage() {
         style={{ backgroundImage: "url('/src/assets/hero.png')" }}
       >
         <h2 className='font-bold text-[#FB437A] text-[46px] pb-4'>"Blossom into moments of pure <br /> delight with our exquisite floral <br /> arrangements."</h2>
-        <Button 
-          title='Chat with Admin' 
-          variant='primary' 
+        <Button
+          title='Chat with Admin'
+          variant='primary'
           onClick={() => window.location.href = "https://wa.me/6285175124992"}
         />
       </section>
       <section className="py-[130px] px-[95px] bg-[rgba(251,67,122,0.15)]">
         <h3 className='text-3xl font-bold text-[#FB437A]'>Best Seller Bouquets</h3>
-        <p className='text-[#4F4F4F] text-xl'>Choose for your special day</p>
-        <div className='flex gap-4 py-4'>
-          <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-          <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-          <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-          <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-          <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
+        <p className='text-[#4F4F4F] text-xl pb-10'>Choose for your special day</p>
+        <div className='grid grid-cols-4 gap-10'>
+          {loading ? (
+            <p>Loading....</p>
+          ) : error ? (
+            <p>Error loading products</p>
+          ) : (
+            products.map((product) => (
+              <CardProduct
+                key={product.id}
+                title={capitalizeEachWord(product.name)}
+                price={product.price}
+                image={product.image}
+              />
+            ))
+          )}
         </div>
       </section>
       <section className='flex items-center justify-between py-[80px] px-[95px]'>
@@ -52,9 +64,9 @@ function LandingPage() {
               />
             ))}
           </div>
-          <Button 
-            title='See Our Catalog' 
-            variant='primary' 
+          <Button
+            title='See Our Catalog'
+            variant='primary'
             onClick={() => navigate(ROUTES.CATALOG)}
           />
         </div>
@@ -118,7 +130,7 @@ function LandingPage() {
             <p>Secure your floral delight instantly and blossom your day <br /> with exactly what you desire.</p>
             <Button title='Buy Now' variant='primary' onClick={() => navigate(ROUTES.CATALOG)} />
           </div>
-          <img className='absolute right-20 top-620 transition-transform duration-300 hover:-translate-y-6' src="src/assets/footer-img.png" alt="footer-img" />
+          <img className='absolute right-20 top-740 transition-transform duration-300 hover:-translate-y-6' src="src/assets/footer-img.png" alt="footer-img" />
         </section>
         <section className='text-center p-2'>
           <p className='text-[#9D9DBC]'>kycaku.project@{currentYear}</p>

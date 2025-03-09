@@ -6,6 +6,8 @@ import { Input } from '../components/ui/input'
 import { Search } from 'lucide-react'
 import Combobox from '../components/ui/combobox'
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '../components/ui/pagination'
+import useProduct from '../hooks/useProduct'
+import { capitalizeEachWord } from '../utils/textUtils'
 
 const CatalogPage: React.FC = () => {
   const dummyOptions = [
@@ -21,6 +23,7 @@ const CatalogPage: React.FC = () => {
     { value: "mix-bouquet", label: "Mixed Bouquet 🌺🌼🌸" },
   ];
 
+  const { products, loading, error } = useProduct();
 
   return (
     <>
@@ -49,16 +52,20 @@ const CatalogPage: React.FC = () => {
             </div>
           </div>
           <div className='grid grid-cols-4 gap-10'>
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
-            <CardProduct title='Lily Birthday' price={20000} image='src/assets/cardimage.png' />
+            {loading ? (
+              <p>Loading....</p>
+            ) : error ? (
+              <p>Error loading products</p>
+            ) : (
+              products.map((product) => (
+                <CardProduct
+                  key={product.id}
+                  title={capitalizeEachWord(product.name)}
+                  price={product.price}
+                  image={product.image}
+                />
+              ))
+            )}
           </div>
           <div className='py-[80px]'>
             <Pagination>
@@ -97,7 +104,7 @@ const CatalogPage: React.FC = () => {
               <p className='text-[#FB437A] text-2xl'>
                 "🎉 Welcome to our store! Enjoy <b>a special 10% discount</b> on your first purchase. <br />Use code <b>WELCOME10</b> at checkout and make your moment extra special! 🌸"
               </p>
-              <Button title='Use Code' variant='secondary' />
+              <Button title='Use Code' variant='secondary' onClick={()=>{}} />
             </div>
           </div>
         </section>
