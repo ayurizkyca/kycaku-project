@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import { getProducts } from '../services/api';
+import { useFetch } from './useFetch';
 
 interface Product {
   id: string;
@@ -9,26 +9,6 @@ interface Product {
   image: string;
 }
 
-const useProduct = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<Error | null>(null);
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const data = await getProducts();
-        setProducts(data);
-      } catch (error) {
-        setError(error as Error);
-      } finally{
-        setLoading(false);
-      }
-    }
-
-    fetchProduct();
-  }, []);
-  return {products, loading, error};
-}
+const useProduct = () => useFetch<Product[]>(getProducts);
 
 export default useProduct;

@@ -3,6 +3,9 @@ import kycakuLogo from '../assets/kycakuLogo.svg'
 import Button from './Button'
 import { Link, useLocation } from 'react-router'
 import { ROUTES } from '../constant/routesConstant'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../components/ui/dialog'
+import { Input } from '../components/ui/input'
+import { Label } from '../components/ui/label'
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -42,7 +45,39 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <Button title='Log In' variant='primary' onClick={()=> {}}/>
+        {/* <Button title='Log In' variant='primary' onClick={() => { }} /> */}
+        <Dialog>
+          <DialogTrigger asChild>
+            {/* <Button variant="outline">Edit Profile</Button> */}
+            <Button title='Log In' variant='primary' onClick={() => { }} />
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Welcome Back !</DialogTitle>
+              <DialogDescription>
+                Log in to your account to continue your shopping experience.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="username" className="text-right">
+                  Username
+                </Label>
+                <Input id="username" className="col-span-3" />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="password" className="text-right">
+                  Password
+                </Label>
+                <Input id="password" className="col-span-3" />
+              </div>
+            </div>
+            <DialogFooter className='flex flex-col'>
+              <Button title='Create New Account' variant='tertiary' onClick={() => { }} />
+              <Button title='Log In' variant='primary' onClick={() => { }} />
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
     </>
   )

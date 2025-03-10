@@ -12,7 +12,7 @@ import { capitalizeEachWord } from '../utils/textUtils'
 function LandingPage() {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
-  const { products, loading, error } = useProduct();
+  const { data, loading, error } = useProduct();
 
   return (
     <LayoutUser>
@@ -25,6 +25,7 @@ function LandingPage() {
           title='Chat with Admin'
           variant='primary'
           onClick={() => window.location.href = "https://wa.me/6285175124992"}
+          width={285}
         />
       </section>
       <section className="py-[130px] px-[95px] bg-[rgba(251,67,122,0.15)]">
@@ -36,7 +37,7 @@ function LandingPage() {
           ) : error ? (
             <p>Error loading products</p>
           ) : (
-            products.map((product) => (
+            data?.map((product) => (
               <CardProduct
                 key={product.id}
                 title={capitalizeEachWord(product.name)}
@@ -128,7 +129,7 @@ function LandingPage() {
           <div className='flex flex-col gap-2'>
             <h1 className='text-[#FB437A] text-4xl font-bold'>Let your moments bloom with our <br /> vibrant bouquets.</h1>
             <p>Secure your floral delight instantly and blossom your day <br /> with exactly what you desire.</p>
-            <Button title='Buy Now' variant='primary' onClick={() => navigate(ROUTES.CATALOG)} />
+            <Button title='Buy Now' variant='primary' onClick={() => navigate(ROUTES.CATALOG)} width={150}/>
           </div>
           <img className='absolute right-20 top-740 transition-transform duration-300 hover:-translate-y-6' src="src/assets/footer-img.png" alt="footer-img" />
         </section>

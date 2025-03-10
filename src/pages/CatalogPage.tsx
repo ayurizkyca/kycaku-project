@@ -23,7 +23,9 @@ const CatalogPage: React.FC = () => {
     { value: "mix-bouquet", label: "Mixed Bouquet 🌺🌼🌸" },
   ];
 
-  const { products, loading, error } = useProduct();
+  const { data, loading, error } = useProduct();
+
+  console.log(data);
 
   return (
     <>
@@ -57,7 +59,7 @@ const CatalogPage: React.FC = () => {
             ) : error ? (
               <p>Error loading products</p>
             ) : (
-              products.map((product) => (
+              data?.map((product) => (
                 <CardProduct
                   key={product.id}
                   title={capitalizeEachWord(product.name)}
